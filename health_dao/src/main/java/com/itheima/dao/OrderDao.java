@@ -17,4 +17,5 @@ public interface OrderDao {
     public List<Map> findHotPackage();
 
     Integer findOrderCountBetweenDate(@Param("startDate") String startDate, @Param("endDate") String endDate);
+
 }

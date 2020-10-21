@@ -12,7 +12,6 @@
     <groupId>com.itheima</groupId>
     <artifactId>health_pojo</artifactId>
 
-
     <dependencies>
         <dependency>
             <groupId>com.itheima</groupId>

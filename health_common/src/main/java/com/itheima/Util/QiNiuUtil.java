@@ -17,13 +17,13 @@ import java.util.List;
 
 public class QiNiuUtil {
 
-    private static final String ACCESSKEY = "SFEru-42dYFEvmHot4dz1UhsepDmOPDql0AfFt8p";
-    private static final String SECRETKEY = "aCzett8JLbldF42PhQGzw6ymQyWreY4Fu8drPKG3";
-    private static final String BUCKET = "sz65";
-    public static final String DOMAIN= "http://pu5aenb9z.bkt.clouddn.com";
+    public  static String ACCESSKEY = "8u7E9dCO3XkCGYQKvhje8aJrPOpZCpESs15kuliP";
+    public  static String SECRETKEY = "NTfuol0lx8E6zi3TSc5gGn8PQstHXHZeYWQRxZBg";
+    public  static String BUCKET = "sz65";
+    public static final String DOMAIN= "http://pudjptgaa.bkt.clouddn.com";
 
     public static void main(String[] args) {
-        uploadFile("C:\\Users\\Eric\\Desktop\\file\\timg.jpg","迪丽热巴.jpg");
+        uploadFile("C:\\Users\\Eric\\Desktop\\file\\20190705083159.jpg","20190705083159.jpg");
         //removeFiles("20190529083159.jpg","20190529083241.jpg");
     }
 

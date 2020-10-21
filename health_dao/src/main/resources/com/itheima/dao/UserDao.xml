@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.itheima.dao.UserDao" >
-    <select id="findByUsername" parameterType="String" resultType="User">
+    <select id="findByUsername" parameterType="String" resultType="com.itheima.pojo.User">
         select * From t_user where username=#{username}
     </select>
 

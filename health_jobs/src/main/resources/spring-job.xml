@@ -7,14 +7,14 @@
     <context:annotation-config></context:annotation-config>
     <!--任务类-->
     <!--<bean id="myJob" class="com.itheima.job.JobDemo"/>-->
-    <bean id="myJob" class="com.itheima.job.CleanImageJob"/>
+    <bean id="myJob" class="com.itheima.job.CleanOrderSetting"/>
 
     <!--任务执行策略-->
     <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
         <!--调用容器中的哪个bean-->
         <property name="targetObject" ref="myJob"/>
         <!--哪个方法-->
-        <property name="targetMethod" value="doCleanImage"/>
+        <property name="targetMethod" value="doCleanOrderSetting"/>
         <!--禁止并发-->
         <property name="concurrent" value="false"/>
     </bean>
@@ -23,6 +23,7 @@
     <bean id="trigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
         <!--cronExpression: 七子表达: 秒 分 时 日 月 周 年-->
         <property name="cronExpression" value="0/30 * * * * ? *"/>
+        <!--<property name="cronExpression" value="0 0 2 * * ? *"/>-->
         <property name="jobDetail" ref="jobDetail"/>
     </bean>
 
@@ -36,4 +37,5 @@
     </bean>
 
     <import resource="classpath:spring-redis.xml"/>
+    <import resource="classpath:spring-dao.xml"/>
 </beans>

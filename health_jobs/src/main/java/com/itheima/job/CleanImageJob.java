@@ -1,11 +1,16 @@
 package com.itheima.job;
 
+import com.itheima.Util.DateUtils;
 import com.itheima.Util.QiNiuUtil;
 import com.itheima.constant.RedisConstant;
+import com.itheima.dao.OrderDao;
+import com.itheima.dao.OrderSettingDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
 
 public class CleanImageJob {
@@ -28,6 +33,6 @@ public class CleanImageJob {
         for (String imageName : picsNeed2Delete) {
             jedis.srem(RedisConstant.SETMEAL_PIC_RESOURCES,imageName);
         }
-
     }
+
 }
